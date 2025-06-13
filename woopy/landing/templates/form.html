@@ -1,0 +1,215 @@
+{%extends 'root.html'%} {%block title%}Contáctanos{%endblock%} {%block content%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+
+<style>
+  .contact-form {
+    background: #fff;
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-image {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-image img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: fill;
+    transform: rotate(29deg);
+  }
+
+  .contact-form h3 {
+    text-align: center;
+    color: #0062cc;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .form-control {
+    border-radius: 2rem;
+    padding: 12px 20px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+
+  .form-control:focus {
+    border-color: #3554dc;
+    box-shadow: 0 0 0 0.2rem rgba(53, 84, 220, 0.25);
+  }
+  .mdi {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #3554dc;
+}
+  .btnContact {
+    width: 100%;
+    border: none;
+    border-radius: 2rem;
+    padding: 12px 20px;
+    background: #3554dc;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+  }
+
+  .btnContact:hover {
+    background: #1e3ca6;
+  }
+
+  .textarea-control {
+    border-radius: 2rem;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    resize: vertical;
+    min-height: 150px;
+    font-family: inherit;
+  }
+
+  .textarea-control:focus {
+    border-color: #3554dc;
+    box-shadow: 0 0 0 0.2rem rgba(53, 84, 220, 0.25);
+    outline: none;
+  }
+
+  /* Responsive design mejorado */
+  @media (max-width: 768px) {
+    .contact-form {
+      margin: 1rem auto;
+      padding: 1.5rem;
+      width: 95%;
+   
+    }
+
+    .contact-form h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-image img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .form-control,
+    .textarea-control {
+      padding: 10px 15px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .contact-form {
+      margin: 0.5rem auto;
+      padding: 1rem;
+      width: 98%;
+      border-radius: 1rem;
+    }
+
+    .contact-form h3 {
+      font-size: 1.3rem;
+    }
+
+    .contact-image img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .form-control,
+    .textarea-control {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+
+    .btnContact {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Fix para pantallas muy pequeñas */
+  @media (max-width: 360px) {
+    .contact-form {
+      margin: 0.25rem auto;
+      padding: 0.75rem;
+      width: 99%;
+    }
+  }
+
+  /* Fix para pantallas muy grandes */
+  @media (min-width: 1200px) {
+    .contact-form {
+      margin: 3rem auto;
+    }
+  }
+</style>
+  <div class="container mt-3">
+    <div class="container contact-form">
+      <div class="contact-image">
+        <i class="mdi mdi-rocket-launch h1"></i>
+        
+      </div>
+      <form method="post">
+        <h3>Envianos un mensaje</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input
+                type="text"
+                name="txtName"
+                class="form-control"
+                placeholder="Nombre*"
+                value=""
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="txtEmail"
+                class="form-control"
+                placeholder="Correo Electronico*"
+                value=""
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="txtPhone"
+                class="form-control"
+                placeholder="Numero Telefonico *"
+                value=""
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="submit"
+                name="btnSubmit"
+                class="btnContact"
+                value="Contactar"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <textarea
+                name="txtMsg"
+                class="form-control"
+                placeholder="Comentario"
+                style="width: 100%; height: 150px"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{%endblock%}

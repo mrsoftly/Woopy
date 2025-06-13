@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body {
+        height: 100%; /* Ambos deben tener 100% de altura para que flexbox funcione correctamente */
+        margin: 0;
+        padding: 0;
+        display: block;
+      }
+
+      body {
+        /* Configuración crucial para el "sticky footer" */
+        display: flex;
+        flex-direction: column; /* Apila header, main, footer verticalmente */
+        min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura del viewport */
+        
+        background: linear-gradient(
+          90deg,
+          rgba(72, 94, 130, 1) 0%,
+          rgba(144, 148, 151, 1) 50%,
+          rgba(198, 205, 220, 1) 100%
+        );
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+      }
+
+      header {
+        /* El header tomará la altura de su contenido. No necesita flex-grow. */
+        /* Aseguramos que no haya un padding extra empujando el nav si las clases de Bootstrap fallan */
+        padding: 0; 
+      }
+
+      main {
+        flex: 1; /* Esto es clave: 'main' se estirará para llenar el espacio restante */
+        /* Removido margin-top: 0; del CSS, ya que Bootstrap maneja mejor el espaciado
+           o no debería haber un margin-top por defecto si el header está justo arriba. */
+        /* Si quieres que solo el contenido del main se desplace, puedes usar: */
+        /* overflow-y: auto; */
+      }
+
+      .navbar {
+        background: linear-gradient(
+          90deg,
+          rgba(52, 102, 168, 1) 0%,
+          rgba(108, 174, 173, 1) 50%,
+          rgba(122, 193, 207, 1) 100%
+        );
+        /* El navbar debería tener su altura intrínseca. No forzar height: 100%; */
+        /* Asegura que no haya márgenes que lo separen del top del header */
+        margin-top: 0; 
+      }
+
+      .navbar-brand {
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .navbar-brand img {
+        height: 60px;
+        width: auto;
+        float: left;
+        
+      }
+
+      .nav-link {
+        color: white !important;
+        font-weight: 500;
+        padding: 0.5rem 0.75rem;
+      }
+
+      .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border-radius: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .navbar-brand {
+          font-size: 1rem;
+        }
+
+        .nav-pills {
+          flex-direction: column;
+          align-items: flex-start;
+          padding-top: 0.5rem;
+        }
+
+        .nav-item {
+          width: 100%;
+        }
+
+        .nav-link {
+          padding-left: 1rem;
+        }
+      }
+
+      .footer {
+        background: linear-gradient(
+          90deg,
+          rgba(52, 102, 168, 1) 0%,
+          rgba(108, 174, 173, 1) 50%,
+          rgba(122, 193, 207, 1) 100%
+        );
+        padding: 20px;
+        text-align: center;
+        /* El footer tomará su altura intrínseca. No necesita flex-grow. */
+        /* `mt-4` en el HTML ya le da el margen superior deseado. */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="justify-content-center py-0 mb-0"> 
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="/">
+            <img src="{% static 'images/logo.png' %}" alt="Logo" />
+            Woopy
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a href="/login/" class="nav-link active" aria-current="page"
+                  >Iniciar Sesión</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Cómo funciona</a>
+              </li>
+              <li class="nav-item">
+                <a href="/planes/" class="nav-link">Nuestros Planes</a>
+              </li>
+              <li class="nav-item">
+                <a href="/contactanos/" class="nav-link">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      {% block content %}
+      <div class="container py-5 text-white text-center">
+        <p style="opacity: 0.5;">(Este bloque aún no tiene contenido)</p>
+        </div>
+      {% endblock %}
+    </main>
+
+    <footer class="footer text-center mt-4">
+      <div class="container p-0 pb-0">
+        <div class="text-center p-3">
+          © 2025 Copyright:
+          <a
+            class="text-dark"
+            href="https://mikusoft.cl/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Mikusoft SpA</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

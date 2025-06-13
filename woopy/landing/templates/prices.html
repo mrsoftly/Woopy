@@ -1,0 +1,237 @@
+{%extends 'root.html'%}
+{%block title%}Nuestros Planes{%endblock%}
+{%block content%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+
+<style>
+
+.pricing-box {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 40px 30px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.pricing-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-box .plan {
+    font-size: 36px;
+    font-weight: bold;
+    color: #222;
+}
+
+.pricing-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    font-size: 15px;
+    height: 100px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.pricing-badge .badge {
+    float: right;
+    transform: rotate(45deg);
+    right: -60px;
+    top: 20px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    font-size: 13px;
+    padding: 10px 10px;
+    font-weight: 600;
+    color: #fff;
+    background: #ff5e57;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.title-box h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.title-box p {
+    font-size: 16px;
+    color: #313030;
+    margin-top: 10px;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 15px;
+    color: #272727;
+}
+
+.f-18 {
+    font-size: 16px !important;
+}
+
+.f-20 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text-muted {
+    color: #161616 !important;
+}
+
+.text-primary {
+    color: #0066ff !important;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #0066ff;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #004ecb;
+    transform: scale(1.05);
+}
+
+.btn-rounded {
+    border-radius: 50px;
+}
+
+.mdi {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.pricing-plan {
+    margin-top: 10px;
+}
+
+.pricing-plan h4 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pricing-plan s {
+    font-size: 16px;
+    color: #aaa;
+}
+</style>
+
+<main id="page-content">
+    <div class="container mt-3">
+        <section class="section" id="pricing">
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title-box text-center">
+                            <h3 class="title-heading mt-4">Nuestros Planes</h3>
+                            <p class="text-muted f-15 mt-3">
+                                Nuestros planes se ajustan a tus necesidades
+                                <br> Aumenta a medida que lo necesites.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planes de precios -->
+                <div class="row mt-3 pt-3">
+                    <!-- Starter -->
+                    <div class="col-lg-4">
+                        <div class="pricing-box mt-4">
+                            <i class="mdi mdi-package h1"></i>
+                            <h4 class="f-20">Aprendiz de Envios</h4>
+                            <div class="mt-4 pt-2">
+                                <p class="mb-2 f-18">Caracteristicas</p>
+                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>Unlimited</b> Target Audience</p>
+                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>1</b> User Account</p>
+                                <p class="mb-2"><i class="mdi mdi-close-circle text-danger f-18 mr-2"></i><b>100+</b> Video Tuts</p>
+                                <p class="mb-2"><i class="mdi mdi-close-circle text-danger f-18 mr-2"></i><b>Public</b> Displays</p>
+                            </div>
+                            <p class="mt-4 pt-2 text-muted">Semper urna veal tempus pharetra elit habisse platea dictumst.</p>
+                            <div class="pricing-plan mt-4 pt-2">
+                                <h4 class="text-muted"> <span class="plan pl-3 text-dark">$5.000</span></h4>
+                                <p class="text-muted mb-0">Mensuales</p>
+                            </div>
+                            <div class="mt-4 pt-3">
+                                <a href="" class="btn btn-primary btn-rounded">Comprar Ahora</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal -->
+                    <div class="col-lg-4">
+                        <div class="pricing-box mt-4">
+                            <div class="pricing-badge">
+                                <span class="badge">Mas Vendido</span>
+                            </div>
+                            <i class="mdi mdi-truck h1 text-primary"></i>
+                            <h4 class="f-20 text-primary">Maestro de Envios</h4>
+                            <div class="mt-4 pt-2">
+                                <p class="mb-2 f-18">Caracteristicas</p>
+                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>Unlimited</b> Target Audience</p>
+                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>1</b> User Account</p>
+                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>100+</b> Video Tuts</p>
+                                <p class="mb-2"><i class="mdi mdi-close-circle text-danger f-18 mr-2"></i><b>Public</b> Displays</p>
+                            </div>
+                            <p class="mt-4 pt-2 text-muted">Semper urna veal tempus pharetra elit habisse platea dictumst.</p>
+                            <div class="pricing-plan mt-4 pt-2">
+                                <h4 class="text-muted"><span class="plan pl-3 text-dark">$10.000</span></h4>
+                                <p class="text-muted mb-0">Mensuales</p>
+                            </div>
+                            <div class="mt-4 pt-3">
+                                <a href="" class="btn btn-primary btn-rounded">Comprar Ahora</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ultimate -->
+                    <div class="col-lg-4">
+                        <div class="pricing-box mt-4">
+                            <i class="mdi mdi-truck-fast h1"></i>
+                            <h4 class="f-20">Hechicero Logistico</h4>
+                            <div class="mt-4 pt-2">
+                                <p class="mb-2 f-18">Caracteristicas</p>
+                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>Unlimited</b> Target Audience</p>
+                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>1</b> User Account</p>
+                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>100+</b> Video Tuts</p>
+                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>Public</b> Displays</p>
+                            </div>
+                            <p class="mt-4 pt-2 text-muted">Semper urna veal tempus pharetra elit habisse platea dictumst.</p>
+                            <div class="pricing-plan mt-4 pt-2">
+                                <h4 class="text-muted"><span class="plan pl-3 text-dark">$15.000</span></h4>
+                                <p class="text-muted mb-0">Mensuales</p>
+                            </div>
+                            <div class="mt-4 pt-3">
+                                <a href="" class="btn btn-primary btn-rounded">Comprar Ahora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </section>
+    </div>
+
+
+
+</main>
+
+{%endblock%}
