@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d3673c66396e0d56f0fd13fc4162110a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d3673c66396e0d56f0fd13fc4162110a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d3673c66396e0d56f0fd13fc4162110a = L.map(
+                "map_d3673c66396e0d56f0fd13fc4162110a",
+                {
+                    center: [-33.5137037, -70.6580167],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1a536d8d3d90e655e18500d00affc6a4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1a536d8d3d90e655e18500d00affc6a4.addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var marker_3b447b002c48eead8246c1a6d1e32228 = L.marker(
+                [-33.5137037, -70.6580167],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_bdb746394380c62c6cefcea4b980d748 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04782fab031fd902bca7b9bd3921c6d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_871a864e2e1a221c64f9413aa1148490 = $(`<div id="html_871a864e2e1a221c64f9413aa1148490" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 0: ID 0</p>                     </div>`)[0];
+                popup_04782fab031fd902bca7b9bd3921c6d0.setContent(html_871a864e2e1a221c64f9413aa1148490);
+            
+        
+
+        marker_3b447b002c48eead8246c1a6d1e32228.bindPopup(popup_04782fab031fd902bca7b9bd3921c6d0)
+        ;
+
+        
+    
+    
+                marker_3b447b002c48eead8246c1a6d1e32228.setIcon(icon_bdb746394380c62c6cefcea4b980d748);
+            
+    
+            var marker_5b4981bfa0f7aeafd39300c542540c48 = L.marker(
+                [-33.4431526, -70.6662218],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_86edf4da2d2a015a6c8f61599bc0f8ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a4fa2169a394fe827f62a58e747e58e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a83845070e82ea8d1ad9f43f2024cdfd = $(`<div id="html_a83845070e82ea8d1ad9f43f2024cdfd" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 1: ID 37</p>                         Cliente: Silvana Rivera Riquelme<br>                     </div>`)[0];
+                popup_2a4fa2169a394fe827f62a58e747e58e.setContent(html_a83845070e82ea8d1ad9f43f2024cdfd);
+            
+        
+
+        marker_5b4981bfa0f7aeafd39300c542540c48.bindPopup(popup_2a4fa2169a394fe827f62a58e747e58e)
+        ;
+
+        
+    
+    
+                marker_5b4981bfa0f7aeafd39300c542540c48.setIcon(icon_86edf4da2d2a015a6c8f61599bc0f8ba);
+            
+    
+            var marker_9fc5b11a543a46ac6788a5d7b9852609 = L.marker(
+                [-33.4171626, -70.6648749],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_072df6d0f1af58cce75403225d9aef9d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d7dd1f82cd5715545863ce298a1f181c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03b28bbdbaddacf7470b9343b24461ed = $(`<div id="html_03b28bbdbaddacf7470b9343b24461ed" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 2: ID 35</p>                         Cliente: Ebel Genesis Cadiz Alfonzo<br>                     </div>`)[0];
+                popup_d7dd1f82cd5715545863ce298a1f181c.setContent(html_03b28bbdbaddacf7470b9343b24461ed);
+            
+        
+
+        marker_9fc5b11a543a46ac6788a5d7b9852609.bindPopup(popup_d7dd1f82cd5715545863ce298a1f181c)
+        ;
+
+        
+    
+    
+                marker_9fc5b11a543a46ac6788a5d7b9852609.setIcon(icon_072df6d0f1af58cce75403225d9aef9d);
+            
+    
+            var marker_e353eedff2d58c62dcce1b50aa83af79 = L.marker(
+                [-33.4501936, -70.5821651],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_1fc1e8a0c6ad296b864b99b9e7ecdaf2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_647e60df81dd974e5a53bcc020424ff5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e97804af968539d62dd609227026519 = $(`<div id="html_8e97804af968539d62dd609227026519" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 3: ID 23</p>                         Cliente: Jessica Aranda<br>                     </div>`)[0];
+                popup_647e60df81dd974e5a53bcc020424ff5.setContent(html_8e97804af968539d62dd609227026519);
+            
+        
+
+        marker_e353eedff2d58c62dcce1b50aa83af79.bindPopup(popup_647e60df81dd974e5a53bcc020424ff5)
+        ;
+
+        
+    
+    
+                marker_e353eedff2d58c62dcce1b50aa83af79.setIcon(icon_1fc1e8a0c6ad296b864b99b9e7ecdaf2);
+            
+    
+            var marker_f09a04a468a496cfd711583fd428ba86 = L.marker(
+                [-33.5019539, -70.56943249999999],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_1ba3929049d028eefc7bfc63bfd9cf8c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d58d1bfd7533b97428dab92b27d6763f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cffde742bf9a83c54af7f5d7bced6cd3 = $(`<div id="html_cffde742bf9a83c54af7f5d7bced6cd3" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 4: ID 28</p>                         Cliente: Alfredo Arredondo<br>                     </div>`)[0];
+                popup_d58d1bfd7533b97428dab92b27d6763f.setContent(html_cffde742bf9a83c54af7f5d7bced6cd3);
+            
+        
+
+        marker_f09a04a468a496cfd711583fd428ba86.bindPopup(popup_d58d1bfd7533b97428dab92b27d6763f)
+        ;
+
+        
+    
+    
+                marker_f09a04a468a496cfd711583fd428ba86.setIcon(icon_1ba3929049d028eefc7bfc63bfd9cf8c);
+            
+    
+            var marker_f3bf99c1f2254c5d8c39478285b2140d = L.marker(
+                [-33.5173034, -70.53073479999999],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_d0df8c4549ee76147a8324de3c273a46 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16d00f2efb1eb33d0e8599c9614a151e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1193793d16df5bb00174af809bcad030 = $(`<div id="html_1193793d16df5bb00174af809bcad030" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 5: ID 38</p>                         Cliente: william Morales<br>                     </div>`)[0];
+                popup_16d00f2efb1eb33d0e8599c9614a151e.setContent(html_1193793d16df5bb00174af809bcad030);
+            
+        
+
+        marker_f3bf99c1f2254c5d8c39478285b2140d.bindPopup(popup_16d00f2efb1eb33d0e8599c9614a151e)
+        ;
+
+        
+    
+    
+                marker_f3bf99c1f2254c5d8c39478285b2140d.setIcon(icon_d0df8c4549ee76147a8324de3c273a46);
+            
+    
+            var marker_90087be7e689d13948feca4d8c91db9b = L.marker(
+                [-33.4869489, -70.551593],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_066340704653c74656954320e4342d40 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61aab7cb1ad643179016acc07a3412b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8716f77844e5fe0946c69d029992dd06 = $(`<div id="html_8716f77844e5fe0946c69d029992dd06" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 6: ID 22</p>                         Cliente: Francisco Moraga<br>                     </div>`)[0];
+                popup_61aab7cb1ad643179016acc07a3412b0.setContent(html_8716f77844e5fe0946c69d029992dd06);
+            
+        
+
+        marker_90087be7e689d13948feca4d8c91db9b.bindPopup(popup_61aab7cb1ad643179016acc07a3412b0)
+        ;
+
+        
+    
+    
+                marker_90087be7e689d13948feca4d8c91db9b.setIcon(icon_066340704653c74656954320e4342d40);
+            
+    
+            var marker_28288e23c63ff58347415cc1367ef49e = L.marker(
+                [-33.4142189, -70.5483034],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_450317f4fa33064f1063b842a2fe5ff9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a42071ec67acd160eb11256ab4ea2a81 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8aebb6c20016ca43d9c1580235ec4271 = $(`<div id="html_8aebb6c20016ca43d9c1580235ec4271" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 7: ID 26</p>                         Cliente: Paulina Baeza Barria<br>                     </div>`)[0];
+                popup_a42071ec67acd160eb11256ab4ea2a81.setContent(html_8aebb6c20016ca43d9c1580235ec4271);
+            
+        
+
+        marker_28288e23c63ff58347415cc1367ef49e.bindPopup(popup_a42071ec67acd160eb11256ab4ea2a81)
+        ;
+
+        
+    
+    
+                marker_28288e23c63ff58347415cc1367ef49e.setIcon(icon_450317f4fa33064f1063b842a2fe5ff9);
+            
+    
+            var marker_4d8e10601aa0d6418160ed983b28baef = L.marker(
+                [-33.2275497, -70.6814077],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_9bc8ff9b29f6d37817ebe675997de659 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e2ba67337b8bb50d50a997ddacc9da2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f53c3692218494a0e80e453920787cb = $(`<div id="html_0f53c3692218494a0e80e453920787cb" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 8: ID 30</p>                         Cliente: Ana Mendoza<br>                     </div>`)[0];
+                popup_9e2ba67337b8bb50d50a997ddacc9da2.setContent(html_0f53c3692218494a0e80e453920787cb);
+            
+        
+
+        marker_4d8e10601aa0d6418160ed983b28baef.bindPopup(popup_9e2ba67337b8bb50d50a997ddacc9da2)
+        ;
+
+        
+    
+    
+                marker_4d8e10601aa0d6418160ed983b28baef.setIcon(icon_9bc8ff9b29f6d37817ebe675997de659);
+            
+    
+            var marker_8c7581a614f80a7c316e482e11d5f430 = L.marker(
+                [-32.7408899, -70.7237244],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_e18a8cbfd440205c223c08d2d3fbeb1b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac545df2cfe043b8d33f0fee422f9432 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f6112e4137436de54121f9599d54ec39 = $(`<div id="html_f6112e4137436de54121f9599d54ec39" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 9: ID 20</p>                         Cliente: Laura Garcia<br>                     </div>`)[0];
+                popup_ac545df2cfe043b8d33f0fee422f9432.setContent(html_f6112e4137436de54121f9599d54ec39);
+            
+        
+
+        marker_8c7581a614f80a7c316e482e11d5f430.bindPopup(popup_ac545df2cfe043b8d33f0fee422f9432)
+        ;
+
+        
+    
+    
+                marker_8c7581a614f80a7c316e482e11d5f430.setIcon(icon_e18a8cbfd440205c223c08d2d3fbeb1b);
+            
+    
+            var marker_c9995417b5dab897190a74052a3246ab = L.marker(
+                [-32.5040172, -71.0022311],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_9f0edb8c466e2cbafea9fc9483b66ed8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_768b53a92ca3b68558182795da6b20c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66e980e1894f0fc06519873e9a775921 = $(`<div id="html_66e980e1894f0fc06519873e9a775921" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 10: ID 36</p>                         Cliente: Leonella Ortega<br>                     </div>`)[0];
+                popup_768b53a92ca3b68558182795da6b20c6.setContent(html_66e980e1894f0fc06519873e9a775921);
+            
+        
+
+        marker_c9995417b5dab897190a74052a3246ab.bindPopup(popup_768b53a92ca3b68558182795da6b20c6)
+        ;
+
+        
+    
+    
+                marker_c9995417b5dab897190a74052a3246ab.setIcon(icon_9f0edb8c466e2cbafea9fc9483b66ed8);
+            
+    
+            var marker_2297e55d270461de523926c2eb779d26 = L.marker(
+                [-33.4067306, -71.14404069999999],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_2e705aeec23b32e071fcd78735d69257 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51d6c11b34601f2df0832a0ccf86c80e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_466d224c6d43a64e73b7bb9f6a4771b0 = $(`<div id="html_466d224c6d43a64e73b7bb9f6a4771b0" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 11: ID 29</p>                         Cliente: Alejandra Silva Aguilera<br>                     </div>`)[0];
+                popup_51d6c11b34601f2df0832a0ccf86c80e.setContent(html_466d224c6d43a64e73b7bb9f6a4771b0);
+            
+        
+
+        marker_2297e55d270461de523926c2eb779d26.bindPopup(popup_51d6c11b34601f2df0832a0ccf86c80e)
+        ;
+
+        
+    
+    
+                marker_2297e55d270461de523926c2eb779d26.setIcon(icon_2e705aeec23b32e071fcd78735d69257);
+            
+    
+            var marker_f6f6fedb9cb322afc3b15063db8beb39 = L.marker(
+                [-33.5684576, -71.17443829999999],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_7b091cc557fc0524c9b49f467ec19108 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06d618a1e12d5a816ad844fdba335cae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85a2bbc2459bdae35f341ba69fe7053e = $(`<div id="html_85a2bbc2459bdae35f341ba69fe7053e" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 12: ID 34</p>                         Cliente: Paulina Sanchez JERIA<br>                     </div>`)[0];
+                popup_06d618a1e12d5a816ad844fdba335cae.setContent(html_85a2bbc2459bdae35f341ba69fe7053e);
+            
+        
+
+        marker_f6f6fedb9cb322afc3b15063db8beb39.bindPopup(popup_06d618a1e12d5a816ad844fdba335cae)
+        ;
+
+        
+    
+    
+                marker_f6f6fedb9cb322afc3b15063db8beb39.setIcon(icon_7b091cc557fc0524c9b49f467ec19108);
+            
+    
+            var marker_adaae5477194e6d37ed33121fee197ea = L.marker(
+                [-36.7796333, -73.0897675],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_0dfcbaec420d36a1b713799c26c4993e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_895db726ac61192f86e5f69e09392835 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e753a6644f041f7ef0ef5513a62a7208 = $(`<div id="html_e753a6644f041f7ef0ef5513a62a7208" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 13: ID 19</p>                         Cliente: Daylight Meza<br>                     </div>`)[0];
+                popup_895db726ac61192f86e5f69e09392835.setContent(html_e753a6644f041f7ef0ef5513a62a7208);
+            
+        
+
+        marker_adaae5477194e6d37ed33121fee197ea.bindPopup(popup_895db726ac61192f86e5f69e09392835)
+        ;
+
+        
+    
+    
+                marker_adaae5477194e6d37ed33121fee197ea.setIcon(icon_0dfcbaec420d36a1b713799c26c4993e);
+            
+    
+            var marker_aa48534131d39a252708fca8a401708d = L.marker(
+                [-36.9657491, -72.9352882],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_a59d519eac1c643f7f94a6e651663938 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d41d33c816785161c6bb40e1af83e194 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89d8f2ea11e1ae3ca232e22f42a46398 = $(`<div id="html_89d8f2ea11e1ae3ca232e22f42a46398" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 14: ID 24</p>                         Cliente: Katherine Henriquez<br>                     </div>`)[0];
+                popup_d41d33c816785161c6bb40e1af83e194.setContent(html_89d8f2ea11e1ae3ca232e22f42a46398);
+            
+        
+
+        marker_aa48534131d39a252708fca8a401708d.bindPopup(popup_d41d33c816785161c6bb40e1af83e194)
+        ;
+
+        
+    
+    
+                marker_aa48534131d39a252708fca8a401708d.setIcon(icon_a59d519eac1c643f7f94a6e651663938);
+            
+    
+            var marker_9d0d46a38c949233bf7553183c7704a5 = L.marker(
+                [-38.733794, -72.61183],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_770b75338f84a5a0f7880e827a154c53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5138691aba6e62d9198bda8cadfb2443 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77c01a22a7824be49397772080aae49b = $(`<div id="html_77c01a22a7824be49397772080aae49b" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 15: ID 21</p>                         Cliente: Denisse Inostroza Fernández<br>                     </div>`)[0];
+                popup_5138691aba6e62d9198bda8cadfb2443.setContent(html_77c01a22a7824be49397772080aae49b);
+            
+        
+
+        marker_9d0d46a38c949233bf7553183c7704a5.bindPopup(popup_5138691aba6e62d9198bda8cadfb2443)
+        ;
+
+        
+    
+    
+                marker_9d0d46a38c949233bf7553183c7704a5.setIcon(icon_770b75338f84a5a0f7880e827a154c53);
+            
+    
+            var marker_1ada08de3353fa0073e8f0e3734b764c = L.marker(
+                [-37.7304035, -72.2366353],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_c6eaed22e6182f980a3c8ff53ffe4e93 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1783d4b10ee9fec5ea8335f6d626caa3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f4b2eeaae89f65a2ae310995eb1d5c5 = $(`<div id="html_8f4b2eeaae89f65a2ae310995eb1d5c5" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 16: ID 32</p>                         Cliente: Francisca Yáñez Quezada<br>                     </div>`)[0];
+                popup_1783d4b10ee9fec5ea8335f6d626caa3.setContent(html_8f4b2eeaae89f65a2ae310995eb1d5c5);
+            
+        
+
+        marker_1ada08de3353fa0073e8f0e3734b764c.bindPopup(popup_1783d4b10ee9fec5ea8335f6d626caa3)
+        ;
+
+        
+    
+    
+                marker_1ada08de3353fa0073e8f0e3734b764c.setIcon(icon_c6eaed22e6182f980a3c8ff53ffe4e93);
+            
+    
+            var marker_8849c0b617b18bd64706b5714bdbb9cd = L.marker(
+                [-35.4355781, -71.60978659999999],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_e798285aef636e139033948c1aafc80b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d53ec31f49158f9741a4c2ee87585c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0b78e87f32b51769645ecfb592c7531 = $(`<div id="html_b0b78e87f32b51769645ecfb592c7531" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 17: ID 25</p>                         Cliente: Claudia Figueroa Henriquez<br>                     </div>`)[0];
+                popup_5d53ec31f49158f9741a4c2ee87585c9.setContent(html_b0b78e87f32b51769645ecfb592c7531);
+            
+        
+
+        marker_8849c0b617b18bd64706b5714bdbb9cd.bindPopup(popup_5d53ec31f49158f9741a4c2ee87585c9)
+        ;
+
+        
+    
+    
+                marker_8849c0b617b18bd64706b5714bdbb9cd.setIcon(icon_e798285aef636e139033948c1aafc80b);
+            
+    
+            var marker_08e7410c0ece6eb3b43dac33c55211c6 = L.marker(
+                [-33.5626904, -70.8377603],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_6b22f0cf9c3a3506437607d1c52d3b04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0abb3f61640db4e4175fac353e96e82e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a1205a7477ae7c64662cbbd625763fd = $(`<div id="html_0a1205a7477ae7c64662cbbd625763fd" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 18: ID 33</p>                         Cliente: Alejandra Vasquez<br>                     </div>`)[0];
+                popup_0abb3f61640db4e4175fac353e96e82e.setContent(html_0a1205a7477ae7c64662cbbd625763fd);
+            
+        
+
+        marker_08e7410c0ece6eb3b43dac33c55211c6.bindPopup(popup_0abb3f61640db4e4175fac353e96e82e)
+        ;
+
+        
+    
+    
+                marker_08e7410c0ece6eb3b43dac33c55211c6.setIcon(icon_6b22f0cf9c3a3506437607d1c52d3b04);
+            
+    
+            var marker_8179b7f65fea596e3fbb4d5aefa536ad = L.marker(
+                [-33.60663, -70.71359],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_2b3b9cd65bd8da754c0792f207ea74a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2ffd32a969a9bcab7a32990acd504fed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ed24aaadbf03313c1e9b46505045e08 = $(`<div id="html_9ed24aaadbf03313c1e9b46505045e08" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 19: ID 31</p>                         Cliente: Betzabet Oyanedel<br>                     </div>`)[0];
+                popup_2ffd32a969a9bcab7a32990acd504fed.setContent(html_9ed24aaadbf03313c1e9b46505045e08);
+            
+        
+
+        marker_8179b7f65fea596e3fbb4d5aefa536ad.bindPopup(popup_2ffd32a969a9bcab7a32990acd504fed)
+        ;
+
+        
+    
+    
+                marker_8179b7f65fea596e3fbb4d5aefa536ad.setIcon(icon_2b3b9cd65bd8da754c0792f207ea74a7);
+            
+    
+            var marker_806c94232251b7967c99d98674dead6c = L.marker(
+                [-33.6051244, -70.7082415],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_1db06b3f71e806750fcae770198ecddc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c43a137ba39e89b2c9544d79079992fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25ae1394e33465f4678abf6547ca786e = $(`<div id="html_25ae1394e33465f4678abf6547ca786e" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 20: ID 27</p>                         Cliente: Fernando Bisbal<br>                     </div>`)[0];
+                popup_c43a137ba39e89b2c9544d79079992fd.setContent(html_25ae1394e33465f4678abf6547ca786e);
+            
+        
+
+        marker_806c94232251b7967c99d98674dead6c.bindPopup(popup_c43a137ba39e89b2c9544d79079992fd)
+        ;
+
+        
+    
+    
+                marker_806c94232251b7967c99d98674dead6c.setIcon(icon_1db06b3f71e806750fcae770198ecddc);
+            
+    
+            var marker_3c5dd21f791403b9fd2a3abfdf0f7948 = L.marker(
+                [-33.5137037, -70.6580167],
+                {
+}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+    
+            var icon_e104233bcc6b8f2bce20516aa6776d31 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa7b2b7e36aaea5fa1c599efd2d2d061 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13634aa9f364c748a3fe6d9c7a5cdc6f = $(`<div id="html_13634aa9f364c748a3fe6d9c7a5cdc6f" style="width: 100.0%; height: 100.0%;">                         <h4>Datos del cliente</h4>                         <p>Punto 21: ID 0</p>                     </div>`)[0];
+                popup_aa7b2b7e36aaea5fa1c599efd2d2d061.setContent(html_13634aa9f364c748a3fe6d9c7a5cdc6f);
+            
+        
+
+        marker_3c5dd21f791403b9fd2a3abfdf0f7948.bindPopup(popup_aa7b2b7e36aaea5fa1c599efd2d2d061)
+        ;
+
+        
+    
+    
+                marker_3c5dd21f791403b9fd2a3abfdf0f7948.setIcon(icon_e104233bcc6b8f2bce20516aa6776d31);
+            
+    
+            var poly_line_0abee32f7b82ac963923675d25477297 = L.polyline(
+                [[-33.5137037, -70.6580167], [-33.4431526, -70.6662218], [-33.4171626, -70.6648749], [-33.4501936, -70.5821651], [-33.5019539, -70.56943249999999], [-33.5173034, -70.53073479999999], [-33.4869489, -70.551593], [-33.4142189, -70.5483034], [-33.2275497, -70.6814077], [-32.7408899, -70.7237244], [-32.5040172, -71.0022311], [-33.4067306, -71.14404069999999], [-33.5684576, -71.17443829999999], [-36.7796333, -73.0897675], [-36.9657491, -72.9352882], [-38.733794, -72.61183], [-37.7304035, -72.2366353], [-35.4355781, -71.60978659999999], [-33.5626904, -70.8377603], [-33.60663, -70.71359], [-33.6051244, -70.7082415], [-33.5137037, -70.6580167]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d3673c66396e0d56f0fd13fc4162110a);
+        
+</script>
+</html>

@@ -1,0 +1,116 @@
+{%extends 'basewoo.html'%}
+{% block title %}Cargar API{% endblock %}
+
+{% block content %}
+<style>
+    /* Contenedor del formulario */
+.form-container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  max-width: 500px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+/* Título */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Campos de entrada */
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Etiquetas */
+.form-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* Botón */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Mensajes */
+.alert {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-error,
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+  }
+}
+</style>
+<div class="container">
+    <h2 class="text-align-center"> Ingresa Tus Credenciales</h2>
+    <form method="post" action="">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="{{ form.url.id_for_label }}" class="form-label">URL</label>
+    {{ form.url }}
+  </div>
+  <div class="mb-3">
+    <label for="{{ form.consumer_key.id_for_label }}" class="form-label">Consumer Key</label>
+    {{ form.consumer_key }}
+  </div>
+  <div class="mb-3">
+    <label for="{{ form.consumer_secret.id_for_label }}" class="form-label">Consumer Secret</label>
+    {{ form.consumer_secret }}
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar API</button>
+</form>
+</div>
+
+{%endblock%}

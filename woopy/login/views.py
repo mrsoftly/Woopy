@@ -1,5 +1,16 @@
-from django.shortcuts import render
-
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
+from django.contrib import messages
 def log(request):
-    return render(request,'login.html')
-# Create your views here.
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            messages.success(request, "Inicio de sesión exitoso")
+            return redirect('cargarapi')
+        else:
+            return render(request, 'login.html', {'error': 'Credenciales inválidas'})
+    return render(request, 'login.html')
+

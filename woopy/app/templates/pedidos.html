@@ -1,0 +1,97 @@
+{% extends "basewoo.html" %}
+{% block title %}Organizar Pedidos{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2 class="py-3">Organizar pedidos</h2>
+
+  <form action="{% url 'pedidos' %}" method="post" class="d-inline">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success">Cargar Pedidos</button>
+  </form>
+
+  {% if org %}
+
+    <div class="card mt-4">
+        <div class="card-header">
+          <h4 class="text-center py-4">Pedidos Organizados</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle text-center">
+              <thead class="table-dark">
+                <tr>
+                  <th>Cliente</th>
+                  <th>latitud</th>
+                  <th>longitud</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for organizados in org %}
+                  <tr>
+                    <td>{{ organizados.pedido.nombre_cliente }}</td>
+                    <td>{{organizados.latitud }}</td>
+                    <td>{{organizados.longitud }}</td>
+                    {%if organizados.pedido.estado_pedido == 'completed'%}
+                    <td>Completado</td>
+                    {%endif%}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            <div class="card">
+              <div class="card-body">
+                
+                
+                <p>Mapa referencial</p>
+                <a class="text-dark" href="{%url 'mapa'%}" target="_blank" rel="noopener noreferrer">Abrir Mapa</a>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  {% else %}
+    {% if pedido %}
+      <div class="card mt-4">
+        <div class="card-header">
+          <h4>Pedidos Cargados</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle text-center">
+              <thead class="table-dark">
+                <tr>
+                  <th>Nombre Cliente</th>
+                  <th>Dirección</th>
+                  <th>Número</th>
+                  <th>Fecha de Pedido</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for pedidos in pedido %}
+                  <tr>
+                    <td>{{ pedidos.nombre_cliente }}</td>
+                    <td>{{ pedidos.direccion }}, {{ pedidos.comuna }}</td>
+                    <td>{{ pedidos.numero_telefonico }}</td>
+                    <td>{{ pedidos.fecha_pedido }}</td>
+                    <td>{{ pedidos.estado_pedido }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <div class="alert alert-info mt-3">
+        No hay pedidos cargados.
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+{% endblock %}

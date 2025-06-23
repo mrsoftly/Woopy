@@ -155,69 +155,29 @@ p {
                 <!-- Planes de precios -->
                 <div class="row mt-3 pt-3">
                     <!-- Starter -->
+                     {%for plan in plans%}
                     <div class="col-lg-4">
                         <div class="pricing-box mt-4">
+                            {%if plan.nombre == "Aprendiz de Envios"%}
                             <i class="mdi mdi-package h1"></i>
-                            <h4 class="f-20">Aprendiz de Envios</h4>
-                            <div class="mt-4 pt-2">
-                                <p class="mb-2 f-18">Caracteristicas</p>
-                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>Unlimited</b> Target Audience</p>
-                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>1</b> User Account</p>
-                                <p class="mb-2"><i class="mdi mdi-close-circle text-danger f-18 mr-2"></i><b>100+</b> Video Tuts</p>
-                                <p class="mb-2"><i class="mdi mdi-close-circle text-danger f-18 mr-2"></i><b>Public</b> Displays</p>
-                            </div>
-                            <p class="mt-4 pt-2 text-muted">Semper urna veal tempus pharetra elit habisse platea dictumst.</p>
-                            <div class="pricing-plan mt-4 pt-2">
-                                <h4 class="text-muted"> <span class="plan pl-3 text-dark">$5.000</span></h4>
-                                <p class="text-muted mb-0">Mensuales</p>
-                            </div>
-                            <div class="mt-4 pt-3">
-                                <a href="" class="btn btn-primary btn-rounded">Comprar Ahora</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Personal -->
-                    <div class="col-lg-4">
-                        <div class="pricing-box mt-4">
-                            <div class="pricing-badge">
+                            {%elif plan.nombre == "Maestro de Envios"%}
+                             <div class="pricing-badge">
                                 <span class="badge">Mas Vendido</span>
                             </div>
                             <i class="mdi mdi-truck h1 text-primary"></i>
-                            <h4 class="f-20 text-primary">Maestro de Envios</h4>
-                            <div class="mt-4 pt-2">
-                                <p class="mb-2 f-18">Caracteristicas</p>
-                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>Unlimited</b> Target Audience</p>
-                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>1</b> User Account</p>
-                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>100+</b> Video Tuts</p>
-                                <p class="mb-2"><i class="mdi mdi-close-circle text-danger f-18 mr-2"></i><b>Public</b> Displays</p>
-                            </div>
-                            <p class="mt-4 pt-2 text-muted">Semper urna veal tempus pharetra elit habisse platea dictumst.</p>
-                            <div class="pricing-plan mt-4 pt-2">
-                                <h4 class="text-muted"><span class="plan pl-3 text-dark">$10.000</span></h4>
-                                <p class="text-muted mb-0">Mensuales</p>
-                            </div>
-                            <div class="mt-4 pt-3">
-                                <a href="" class="btn btn-primary btn-rounded">Comprar Ahora</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Ultimate -->
-                    <div class="col-lg-4">
-                        <div class="pricing-box mt-4">
+                            {%elif plan.nombre == "Hechicero Logistico"%}
                             <i class="mdi mdi-truck-fast h1"></i>
-                            <h4 class="f-20">Hechicero Logistico</h4>
+                            {%endif%}
+                            <h4 class="f-20">{{ plan.nombre }}</h4>
                             <div class="mt-4 pt-2">
                                 <p class="mb-2 f-18">Caracteristicas</p>
-                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>Unlimited</b> Target Audience</p>
-                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>1</b> User Account</p>
-                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>100+</b> Video Tuts</p>
-                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i><b>Public</b> Displays</p>
+                                
+                                <p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i> {{ plan.caracteristicas }}</p>
+                                    
                             </div>
-                            <p class="mt-4 pt-2 text-muted">Semper urna veal tempus pharetra elit habisse platea dictumst.</p>
+
                             <div class="pricing-plan mt-4 pt-2">
-                                <h4 class="text-muted"><span class="plan pl-3 text-dark">$15.000</span></h4>
+                                <h4 class="text-muted"> <span class="plan pl-3 text-dark">${{ plan.precio|floatformat:0 }}</span></h4>
                                 <p class="text-muted mb-0">Mensuales</p>
                             </div>
                             <div class="mt-4 pt-3">
@@ -225,6 +185,8 @@ p {
                             </div>
                         </div>
                     </div>
+                    {%endfor%}
+                    
                 </div> 
             </div> 
         </section>
